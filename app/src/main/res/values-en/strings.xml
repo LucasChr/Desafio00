@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Challenge01</string>
+    <string name="txtNome">Name</string>
+    <string name="campo_nome">Your name</string>
+    <string name="txtEndereco">Address</string>
+    <string name="campo_Endereco">Your address</string>
+    <string name="txtTelefone">Phone</string>
+    <string name="campo_telefone">(DD)0000-0000</string>
+    <string name="txtSite">Site</string>
+    <string name="campo_site">Your web site</string>
+    <string name="btnConfirma">Ok</string>
+    <string name="btnLigar">Call</string>
+    <string name="btnIr">Go</string>
+    <string name="btn_Entrar">Get in</string>
+    <string name="campo_dados"></string>
+
+</resources>

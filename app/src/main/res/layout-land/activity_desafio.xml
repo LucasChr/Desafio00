@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.lucas.desafio00.DesafioActivity"
+    style="@style/Fundo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/txtNome"
+        android:id="@+id/tvNome"
+        android:layout_alignBottom="@+id/edtNome"
+        style="@style/Letras"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/txtEndereco"
+        android:id="@+id/tvEndereco"
+        style="@style/Letras"
+        android:layout_alignTop="@+id/edtEndereco"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/txtTelefone"
+        android:id="@+id/tvTelefone"
+        style="@style/Letras"
+        android:layout_alignBottom="@+id/edtTelefone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/txtSite"
+        android:id="@+id/tvSite"
+        style="@style/Letras"
+        android:layout_above="@+id/btnConfirma"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/campo_nome"
+        android:ems="10"
+        android:id="@+id/edtNome"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/tvEndereco"
+        android:layout_toEndOf="@+id/tvEndereco" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/campo_Endereco"
+        android:ems="10"
+        android:id="@+id/edtEndereco"
+        android:layout_above="@+id/edtTelefone"
+        android:layout_alignLeft="@+id/edtTelefone"
+        android:layout_alignStart="@+id/edtTelefone"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/campo_telefone"
+        android:ems="10"
+        android:id="@+id/edtTelefone"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/btnConfirma"
+        android:layout_toEndOf="@+id/btnConfirma" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/campo_site"
+        android:ems="10"
+        android:id="@+id/edtSite"
+        android:layout_alignBottom="@+id/tvSite"
+        android:layout_toRightOf="@+id/tvNome"
+        android:layout_toEndOf="@+id/tvNome" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnConfirma"
+        android:id="@+id/btnConfirma"
+        android:onClick="confirmaDados"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnLigar"
+        android:id="@+id/bntLigar"
+        android:layout_alignTop="@+id/btnConfirma"
+        android:layout_toRightOf="@+id/btnConfirma"
+        android:layout_toEndOf="@+id/btnConfirma"
+        android:onClick="fazerLigacao"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnIr"
+        android:id="@+id/bntIr"
+        android:layout_alignTop="@+id/bntLigar"
+        android:layout_toRightOf="@+id/bntLigar"
+        android:layout_toEndOf="@+id/bntLigar"
+        android:onClick="abrirSite"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/campo_dados"
+        android:id="@+id/tvDNome"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/edtTelefone"
+        android:layout_toEndOf="@+id/edtTelefone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/campo_dados"
+        android:id="@+id/tvDEndereco"
+        android:layout_above="@+id/edtEndereco"
+        android:layout_alignLeft="@+id/tvDTelefone"
+        android:layout_alignStart="@+id/tvDTelefone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/campo_dados"
+        android:id="@+id/tvDTelefone"
+        android:layout_above="@+id/edtEndereco"
+        android:layout_alignLeft="@+id/tvDSite"
+        android:layout_alignStart="@+id/tvDSite" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/campo_dados"
+        android:id="@+id/tvDSite"
+        android:layout_below="@+id/tvDTelefone"
+        android:layout_toRightOf="@+id/tvDNome"
+        android:layout_marginLeft="41dp" />
+
+</RelativeLayout>
+

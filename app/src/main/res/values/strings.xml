@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Desafio01</string>
+    <string name="txtNome">Nome</string>
+    <string name="campo_nome">Seu nome aqui</string>
+    <string name="txtEndereco">Endereço</string>
+    <string name="campo_Endereco">Digite um endereço</string>
+    <string name="txtTelefone">Telefone</string>
+    <string name="campo_telefone">(DDD)0000-0000</string>
+    <string name="txtSite">Site</string>
+    <string name="campo_site">Digite seu site aqui</string>
+    <string name="btnConfirma">Confirma</string>
+    <string name="btnLigar">Ligar</string>
+    <string name="btnIr">Ir</string>
+    <string name="btn_Entrar">Entrar</string>
+    <string name="campo_dados"></string>
+
+</resources>
