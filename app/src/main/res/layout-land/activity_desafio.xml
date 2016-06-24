@@ -134,9 +134,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/campo_dados"
         android:id="@+id/tvDNome"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/edtTelefone"
-        android:layout_toEndOf="@+id/edtTelefone" />
+        android:layout_alignTop="@+id/edtNome"
+        android:layout_alignLeft="@+id/tvDEndereco"
+        android:layout_alignStart="@+id/tvDEndereco" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -144,9 +144,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/campo_dados"
         android:id="@+id/tvDEndereco"
-        android:layout_above="@+id/edtEndereco"
-        android:layout_alignLeft="@+id/tvDTelefone"
-        android:layout_alignStart="@+id/tvDTelefone" />
+        android:layout_below="@+id/tvDNome"
+        android:layout_toRightOf="@+id/edtEndereco"
+        android:layout_marginLeft="22dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -154,9 +154,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/campo_dados"
         android:id="@+id/tvDTelefone"
-        android:layout_above="@+id/edtEndereco"
-        android:layout_alignLeft="@+id/tvDSite"
-        android:layout_alignStart="@+id/tvDSite" />
+        android:layout_below="@+id/tvDEndereco"
+        android:layout_toRightOf="@+id/edtEndereco"
+        android:layout_marginLeft="22dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -165,8 +165,8 @@
         android:text="@string/campo_dados"
         android:id="@+id/tvDSite"
         android:layout_below="@+id/tvDTelefone"
-        android:layout_toRightOf="@+id/tvDNome"
-        android:layout_marginLeft="41dp" />
+        android:layout_toRightOf="@+id/edtEndereco"
+        android:layout_marginLeft="22dp" />
 
 </RelativeLayout>
 

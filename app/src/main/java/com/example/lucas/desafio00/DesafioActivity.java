@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DesafioActivity extends AppCompatActivity {
 
@@ -28,8 +30,33 @@ public class DesafioActivity extends AppCompatActivity {
         tvDEndereco = (TextView) findViewById(R.id.tvDEndereco);
         tvDTelefone = (TextView) findViewById(R.id.tvDTelefone);
         tvDSite = (TextView) findViewById(R.id.tvDSite);
-
+        iniciarToast();
     }
+
+
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("valor", tvDNome.getText().toString());
+        outState.putString("valor2", tvDEndereco.getText().toString());
+        outState.putString("valor3", tvDTelefone.getText().toString());
+        outState.putString("valor4", tvDSite.getText().toString());
+        Log.i("bundle", "save");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle bundle) {
+        super.onRestoreInstanceState(bundle);
+        tvDNome.setText(bundle.getString("valor"));
+        tvDEndereco.setText(bundle.getString("valor2"));
+        tvDTelefone.setText(bundle.getString("valor3"));
+        tvDSite.setText(bundle.getString("valor4"));
+        Log.i("bundle", "restore");
+    }
+
+
+
 
     public void confirmaDados(View v){
         setarNome();
@@ -60,6 +87,11 @@ public class DesafioActivity extends AppCompatActivity {
         Intent it = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(it);
     }
+
+    public void iniciarToast(){
+        Toast.makeText(this,"Iniciando Tela Cadastro",Toast.LENGTH_LONG).show();
+    }
+
 
 
 }
