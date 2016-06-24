@@ -30,7 +30,6 @@ public class DesafioActivity extends AppCompatActivity {
         tvDEndereco = (TextView) findViewById(R.id.tvDEndereco);
         tvDTelefone = (TextView) findViewById(R.id.tvDTelefone);
         tvDSite = (TextView) findViewById(R.id.tvDSite);
-        iniciarToast();
     }
 
 
@@ -87,11 +86,6 @@ public class DesafioActivity extends AppCompatActivity {
         Intent it = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(it);
     }
-
-    public void iniciarToast(){
-        Toast.makeText(this,"Iniciando Tela Cadastro",Toast.LENGTH_LONG).show();
-    }
-
 
 
 }
