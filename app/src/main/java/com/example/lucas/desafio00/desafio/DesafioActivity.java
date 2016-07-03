@@ -1,4 +1,4 @@
-package com.example.lucas.desafio00;
+package com.example.lucas.desafio00.desafio;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.lucas.desafio00.R;
 
 public class DesafioActivity extends AppCompatActivity {
 
