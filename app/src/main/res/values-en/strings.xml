@@ -12,6 +12,6 @@
     <string name="btnLigar">Call</string>
     <string name="btnIr">Go</string>
     <string name="btn_Entrar">Get in</string>
-    <string name="campo_dados"></string>
-
+    <string name="campo_id"></string>
+    <string name="txtId">ID</string>
 </resources>

@@ -10,23 +10,24 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BancoDados {
 
     private static final String NOME_BANCO = "desafio02";
-    private static final int VERSAO_BANCO = 1;
+    private static final int VERSAO_BANCO = 5;
 
     //Script
-    private static final String[] SCRIPT_DATABASE_DELETE = new String[] {"drop table if exists tbl_desafio;"};
+    private static final String[] SCRIPT_DATABASE_DELETE = new String[] {"DROP TABLE IF EXISTS tbl_desafio;"};
 
     //Tabela com id sequencial usa-se _id
     private static final String[] SCRIPT_DATABASE_CREATE = new String[]{
-            "create table tbl_desafio(_id integer primary key, nome text, endereço text, telefone int, site text);"
+            "create table tbl_desafio(_id integer primary key, nome text, endereco text, telefone text, site text);"
     };
 
     private static SQLiteDatabase db;
 
-    public static SQLiteDatabase getDB(Context ctx){
-        if(db == null){
-            SQLiteHelper dbHelper = new SQLiteHelper(ctx, NOME_BANCO,VERSAO_BANCO,SCRIPT_DATABASE_CREATE,SCRIPT_DATABASE_DELETE);
+    public static SQLiteDatabase getDB(Context ctx) {
+        if (db == null) {
+            SQLiteHelper dbHelper = new SQLiteHelper(ctx, NOME_BANCO, VERSAO_BANCO, SCRIPT_DATABASE_CREATE, SCRIPT_DATABASE_DELETE);
             db = dbHelper.getWritableDatabase();
         }
         return db;
+
     }
 }

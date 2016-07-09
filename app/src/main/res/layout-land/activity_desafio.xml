@@ -1,172 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context=".desafio.DesafioActivity"
-    style="@style/Fundo">
+    style="@style/Fundo"
+    android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/txtNome"
-        android:id="@+id/tvNome"
-        android:layout_alignBottom="@+id/edtNome"
-        style="@style/Letras"
-        />
+        android:orientation="horizontal"
+        android:layout_weight="0.08"
+        android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/txtNome"
+            android:id="@+id/tvNome"
+            style="@style/Letras"/>
+
+
+        <EditText
+            android:layout_width="306dp"
+            android:layout_height="54dp"
+            android:inputType="textPersonName"
+            android:hint="@string/campo_nome"
+            android:ems="10"
+            android:id="@+id/edtNome"
+            android:layout_weight="0.23" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/txtId"
+            android:id="@+id/tvID"
+            style="@style/Letras"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:text="@string/campo_id"
+            android:id="@+id/edtID"
+            android:layout_weight="0.17" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/txtEndereco"
+            android:id="@+id/tvEndereco"
+            android:layout_marginTop="20dp"
+            style="@style/Letras"/>
+
+        <EditText
+            android:layout_width="326dp"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:hint="@string/campo_Endereco"
+            android:ems="10"
+            android:id="@+id/edtEndereco"
+            android:layout_gravity="center_vertical" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/txtTelefone"
+            android:id="@+id/tvTelefone"
+            android:layout_marginTop="20dp"
+            style="@style/Letras" />
+
+        <EditText
+            android:layout_width="335dp"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:hint="@string/campo_telefone"
+            android:ems="10"
+            android:id="@+id/edtTelefone"
+            android:layout_gravity="center_vertical" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/txtEndereco"
-        android:id="@+id/tvEndereco"
-        style="@style/Letras"
-        android:layout_alignTop="@+id/edtEndereco"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/txtTelefone"
-        android:id="@+id/tvTelefone"
-        style="@style/Letras"
-        android:layout_alignBottom="@+id/edtTelefone"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/txtSite"
-        android:id="@+id/tvSite"
-        style="@style/Letras"
-        android:layout_above="@+id/btnConfirma"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/txtSite"
+            android:id="@+id/tvSite"
+            style="@style/Letras"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/campo_nome"
-        android:ems="10"
-        android:id="@+id/edtNome"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/tvEndereco"
-        android:layout_toEndOf="@+id/tvEndereco" />
+        <EditText
+            android:layout_width="382dp"
+            android:layout_height="55dp"
+            android:inputType="textPersonName"
+            android:hint="@string/campo_site"
+            android:ems="10"
+            android:id="@+id/edtSite"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/campo_Endereco"
-        android:ems="10"
-        android:id="@+id/edtEndereco"
-        android:layout_above="@+id/edtTelefone"
-        android:layout_alignLeft="@+id/edtTelefone"
-        android:layout_alignStart="@+id/edtTelefone"
-        android:layout_marginBottom="16dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/campo_telefone"
-        android:ems="10"
-        android:id="@+id/edtTelefone"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/btnConfirma"
-        android:layout_toEndOf="@+id/btnConfirma" />
+    </LinearLayout>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="@string/campo_site"
-        android:ems="10"
-        android:id="@+id/edtSite"
-        android:layout_alignBottom="@+id/tvSite"
-        android:layout_toRightOf="@+id/tvNome"
-        android:layout_toEndOf="@+id/tvNome" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnConfirma"
-        android:id="@+id/btnConfirma"
-        android:onClick="confirmaDados"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnLigar"
-        android:id="@+id/bntLigar"
-        android:layout_alignTop="@+id/btnConfirma"
-        android:layout_toRightOf="@+id/btnConfirma"
-        android:layout_toEndOf="@+id/btnConfirma"
-        android:onClick="fazerLigacao"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnConfirma"
+            android:id="@+id/btnConfirma"
+            android:onClick="confirmaDados"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnIr"
-        android:id="@+id/bntIr"
-        android:layout_alignTop="@+id/bntLigar"
-        android:layout_toRightOf="@+id/bntLigar"
-        android:layout_toEndOf="@+id/bntLigar"
-        android:onClick="abrirSite"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnLigar"
+            android:id="@+id/bntLigar"
+            android:onClick="fazerLigacao"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/campo_dados"
-        android:id="@+id/tvDNome"
-        android:layout_alignTop="@+id/edtNome"
-        android:layout_alignLeft="@+id/tvDEndereco"
-        android:layout_alignStart="@+id/tvDEndereco" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnIr"
+            android:id="@+id/bntIr"
+            android:onClick="abrirSite"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/campo_dados"
-        android:id="@+id/tvDEndereco"
-        android:layout_below="@+id/tvDNome"
-        android:layout_toRightOf="@+id/edtEndereco"
-        android:layout_marginLeft="22dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/campo_dados"
-        android:id="@+id/tvDTelefone"
-        android:layout_below="@+id/tvDEndereco"
-        android:layout_toRightOf="@+id/edtEndereco"
-        android:layout_marginLeft="22dp" />
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/campo_dados"
-        android:id="@+id/tvDSite"
-        android:layout_below="@+id/tvDTelefone"
-        android:layout_toRightOf="@+id/edtEndereco"
-        android:layout_marginLeft="22dp" />
-
-</RelativeLayout>
+</LinearLayout>
 

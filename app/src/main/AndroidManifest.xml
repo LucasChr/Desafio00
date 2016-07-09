@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lucas.desafio00">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".desafio.DesafioActivity"></activity>
+        <activity android:name=".desafio.DesafioActivity" />
+        <activity android:name=".desafio.DesafioListActivity" />
+        <activity android:name=".cadastro.CadastroDAO" />
+        <activity android:name=".cadastro.CadastroCadActivity" />
     </application>
 
 </manifest>
