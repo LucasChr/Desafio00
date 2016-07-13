@@ -20,7 +20,6 @@ public class MainActivity extends Activity {
         inicioToast();
     }
 
-
     public void abrirTela(View v){
         Intent it = new Intent(this, CadastroListActivity.class);
         startActivity(it);
