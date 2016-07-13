@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BancoDados {
 
     private static final String NOME_BANCO = "desafio02";
-    private static final int VERSAO_BANCO = 5;
+    private static final int VERSAO_BANCO = 6;
 
     //Script
     private static final String[] SCRIPT_DATABASE_DELETE = new String[] {"DROP TABLE IF EXISTS tbl_desafio;"};

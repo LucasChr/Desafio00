@@ -4,21 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".desafio.DesafioActivity"
-    style="@style/Fundo"
-    android:weightSum="1">
+    tools:context="com.example.lucas.desafio00.cadastro.CadastroCadActivity"
+    style="@style/Fundo">
+
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="0.08"
-        android:weightSum="1">
-
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="38dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txtId"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/txtID"
+            style="@style/Letras"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/campo_id"
+            android:id="@+id/cadastro_cad_edtID"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/txtNome"
             android:id="@+id/tvNome"
@@ -26,37 +40,11 @@
 
 
         <EditText
-            android:layout_width="306dp"
-            android:layout_height="54dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="@string/campo_nome"
-            android:ems="10"
-            android:id="@+id/edtNome"
-            android:layout_weight="0.23" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/txtId"
-            android:id="@+id/tvID"
-            style="@style/Letras"/>
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="54dp"
-            android:text="@string/campo_id"
-            android:id="@+id/edtID"
-            android:layout_weight="0.17" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:orientation="horizontal"
-        android:weightSum="1">
+            android:id="@+id/cadastro_cad_edtNome" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,54 +52,36 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/txtEndereco"
             android:id="@+id/tvEndereco"
-            android:layout_marginTop="20dp"
             style="@style/Letras"/>
 
         <EditText
-            android:layout_width="326dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="@string/campo_Endereco"
             android:ems="10"
-            android:id="@+id/edtEndereco"
+            android:id="@+id/cadastro_cad_edtEndereco"
             android:layout_gravity="center_vertical" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/txtTelefone"
-            android:id="@+id/tvTelefone"
-            android:layout_marginTop="20dp"
-            style="@style/Letras" />
-
-        <EditText
-            android:layout_width="335dp"
-            android:layout_height="match_parent"
-            android:inputType="textPersonName"
-            android:hint="@string/campo_telefone"
-            android:ems="10"
-            android:id="@+id/edtTelefone"
-            android:layout_gravity="center_vertical" />
-
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/txtTelefone"
+            android:id="@+id/tvTelefone"
+            style="@style/Letras" />
 
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/campo_telefone"
+            android:id="@+id/cadastro_cad_edtTelefone"
+            android:layout_gravity="center_vertical" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -122,45 +92,36 @@
             style="@style/Letras"/>
 
         <EditText
-            android:layout_width="382dp"
-            android:layout_height="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="@string/campo_site"
             android:ems="10"
-            android:id="@+id/edtSite"/>
-
-
+            android:id="@+id/cadastro_cad_edtSite"/>
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/btnConfirma"
-            android:id="@+id/btnConfirma"
-            android:onClick="confirmaDados"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnLigar"
-            android:id="@+id/bntLigar"
+            android:id="@+id/cadastro_cad_btnLigar"
             android:onClick="fazerLigacao"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnIr"
-            android:id="@+id/bntIr"
+            android:id="@+id/cadastro_cad_btnIr"
             android:onClick="abrirSite"/>
 
-
     </LinearLayout>
+
 
 </LinearLayout>
 

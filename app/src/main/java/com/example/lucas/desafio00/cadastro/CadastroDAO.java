@@ -4,8 +4,12 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.lucas.desafio00.sqlite.BancoDados;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by lucas on 03/07/16.
@@ -23,6 +27,7 @@ public class CadastroDAO {
         values.put("telefone", cadastro.getTelefone());
         values.put("site", cadastro.getSite());
         db.insert("tbl_desafio",null,values);
+        Log.i("Cadastro","Salvo");
     }
 
     public void alterar(Cadastro cadastro){
@@ -58,6 +63,29 @@ public class CadastroDAO {
     public void excluir(String id){
         String[] whereArgs = new String[]{id};
         db.delete("tbl_desafio","_id=?",whereArgs);
+    }
+
+
+    public List<Cadastro> listar(){
+
+        String[] col = new String[]{"_id","nome","endereco","telefone","site"};
+        Cursor cursor = db.query("tbl_desafio",col,null,null,null,null,null);
+
+        List<Cadastro>cadastros = new ArrayList<Cadastro>();
+        if(cursor.moveToFirst()){
+            do{
+                Cadastro c = new Cadastro();
+                c.setId(cursor.getLong(cursor.getColumnIndex("_id")));
+                c.setNome(cursor.getString(cursor.getColumnIndex("nome")));
+                c.setEndereco(cursor.getString(cursor.getColumnIndex("endereco")));
+                c.setTelefone(cursor.getString(cursor.getColumnIndex("telefone")));
+                c.setSite(cursor.getString(cursor.getColumnIndex("site")));
+
+                cadastros.add(c);
+            }while (cursor.moveToNext());
+        }
+
+        return cadastros;
     }
 
 }

@@ -22,6 +22,7 @@
         <activity android:name=".desafio.DesafioListActivity" />
         <activity android:name=".cadastro.CadastroDAO" />
         <activity android:name=".cadastro.CadastroCadActivity" />
+        <activity android:name=".cadastro.CadastroListActivity"></activity>
     </application>
 
 </manifest>

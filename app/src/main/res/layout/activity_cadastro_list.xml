@@ -4,17 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.lucas.desafio00.desafio.MainActivity"
+    tools:context="com.example.lucas.desafio00.cadastro.CadastroListActivity"
     style="@style/Fundo">
 
-
-    <Button
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_Entrar"
-        android:id="@+id/btnEntrar"
-        android:layout_marginTop="140dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="abrirTela"/>
+        android:id="@android:id/list"/>
+
 </LinearLayout>

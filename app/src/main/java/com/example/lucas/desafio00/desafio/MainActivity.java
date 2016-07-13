@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.lucas.desafio00.R;
+import com.example.lucas.desafio00.cadastro.CadastroListActivity;
 
 public class MainActivity extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,7 @@ public class MainActivity extends Activity {
 
 
     public void abrirTela(View v){
-        Intent it = new Intent(this, DesafioActivity.class);
+        Intent it = new Intent(this, CadastroListActivity.class);
         startActivity(it);
     }
 
